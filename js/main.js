@@ -2,14 +2,14 @@ require([], function (){
 
 	var isMobileInit = false;
 	var loadMobile = function(){
-		require([yiliaConfig.root + '/js/mobile.js'], function(mobile){
+		require(['/js/mobile.js'], function(mobile){
 			mobile.init();
 			isMobileInit = true;
 		});
 	}
 	var isPCInit = false;
 	var loadPC = function(){
-		require([yiliaConfig.root + '/js/pc.js'], function(pc){
+		require(['/js/pc.js'], function(pc){
 			pc.init();
 			isPCInit = true;
 		});
@@ -55,7 +55,7 @@ require([], function (){
 
 	//是否使用fancybox
 	if(yiliaConfig.fancybox === true){
-		require([yiliaConfig.root + '/fancybox/jquery.fancybox.js'], function(pc){
+		require(['/fancybox/jquery.fancybox.js'], function(pc){
 			var isFancy = $(".isFancy");
 			if(isFancy.length != 0){
 				var imgArr = $(".article-inner img");
